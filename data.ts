@@ -3,7 +3,7 @@ import { Exam } from './types';
 export const exams: Exam[] = [
   {
     id: 'ibn-khaldun',
-    title: 'اختبار ابن خلدون الشامل',
+    title: 'ابن خلدون',
     description: 'اختبر معلوماتك حول مؤسس علم الاجتماع ومقدمته الشهيرة ونظرياته في العمران والعصبية.',
     icon: 'scroll',
     mcqQuestions: [
@@ -105,7 +105,7 @@ export const exams: Exam[] = [
   },
   {
     id: 'al-mawardi',
-    title: 'اختبار الماوردي (الأحكام السلطانية)',
+    title: 'الماوردي',
     description: 'اختبار يركز على الفكر السياسي للماوردي، كتابه الأحكام السلطانية، ونظريته في الإمامة والوزارة.',
     icon: 'scale',
     mcqQuestions: [
@@ -207,7 +207,7 @@ export const exams: Exam[] = [
   },
   {
     id: 'renaissance',
-    title: 'اختبار عصر النهضة',
+    title: 'ميكافيلي وهوبز',
     description: 'اختبار حول عصر النهضة الأوروبية، وشخصياتها مثل ميكيافيلي وهوبز، والتحولات الفكرية والسياسية.',
     icon: 'pen',
     mcqQuestions: [
@@ -309,7 +309,7 @@ export const exams: Exam[] = [
   },
   {
     id: 'ibn-taymiyyah',
-    title: 'اختبار ابن تيمية (السياسة الشرعية)',
+    title: 'ابن تيمية',
     description: 'اختبار في الفكر السياسي لابن تيمية، مفهوم الإمارة، الأمانة والقوة، واختيار الولاة.',
     icon: 'book',
     mcqQuestions: [

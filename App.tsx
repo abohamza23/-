@@ -3,7 +3,7 @@ import { exams } from './data';
 import { Exam } from './types';
 import QuizSection from './components/QuizSection';
 import EssaySection from './components/EssaySection';
-import { BookOpen, CheckSquare, Edit3, Scroll, Scale, Pen, Book, ArrowRight, Library } from 'lucide-react';
+import { BookOpen, CheckSquare, Edit3, Scroll, Scale, Pen, Book, ArrowRight } from 'lucide-react';
 
 type Tab = 'MCQ' | 'TF' | 'ESSAY';
 type View = 'HOME' | 'EXAM';
@@ -38,7 +38,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#f0f4f8] text-right font-sans">
+    <div className="min-h-screen bg-[#f0f4f8] text-right font-sans flex flex-col">
       {/* Hero / Header */}
       <header className="bg-gradient-to-l from-primary to-[#0d5e56] text-white pb-24 pt-12 px-4 shadow-xl relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
@@ -50,19 +50,28 @@ const App: React.FC = () => {
              </svg>
         </div>
         
-        <div className="max-w-6xl mx-auto relative z-10 text-center">
-          <div className="inline-flex items-center justify-center p-4 bg-white/10 rounded-full mb-6 backdrop-blur-sm ring-4 ring-white/5">
-            <Library className="w-10 h-10 text-accent" />
+        <div className="max-w-6xl mx-auto relative z-10 text-center flex flex-col items-center">
+          <div className="mb-6">
+            {/* 
+              ملاحظة: لاستخدام الشعار الخاص بك (صورة الصقر مع النص)، قم بإضافة ملف الصورة إلى مجلد المشروع 
+              وقم بتغيير الرابط أدناه إلى مسار الصورة المحلي (مثلاً: ./logo.png)
+            */}
+            <img 
+              src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" 
+              alt="شعار الشاهين" 
+              className="w-48 h-48 object-contain drop-shadow-2xl filter brightness-110 hover:scale-105 transition-transform duration-300"
+            />
+            <h1 className="sr-only">الشاهين</h1>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 font-serif tracking-wide">منصة الاختبارات التاريخية</h1>
-          <p className="text-lg md:text-2xl text-gray-100 max-w-3xl mx-auto opacity-90 font-light leading-relaxed">
-            اختبر معلوماتك في التاريخ الإسلامي والفكر السياسي وعصر النهضة عبر مجموعة من الاختبارات الشاملة.
+          
+          <p className="text-xl md:text-3xl text-gray-100 max-w-3xl mx-auto font-medium leading-relaxed font-serif tracking-wide">
+            مادة: مقدمة في الفكر السياسي اختبار الفاينال
           </p>
         </div>
       </header>
 
       {/* Main Content Container */}
-      <main className="max-w-6xl mx-auto px-4 -mt-16 relative z-20 pb-20">
+      <main className="max-w-6xl mx-auto px-4 -mt-16 relative z-20 pb-20 w-full flex-grow">
         
         {currentView === 'HOME' && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in-up">
@@ -185,8 +194,8 @@ const App: React.FC = () => {
 
       </main>
 
-      <footer className="bg-white border-t py-8 text-center text-gray-500 text-sm mt-auto">
-        <p>© 2024 منصة الاختبارات التاريخية | تم التطوير لأغراض تعليمية</p>
+      <footer className="bg-white border-t py-8 text-center mt-auto">
+        <p className="font-serif text-2xl font-bold text-primary">الشاهين</p>
       </footer>
     </div>
   );
