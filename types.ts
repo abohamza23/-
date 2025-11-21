@@ -27,3 +27,13 @@ export interface AIResponse {
   score: number;
   feedback: string;
 }
+
+export interface Exam {
+  id: string;
+  title: string;
+  description: string;
+  icon: string; // Simple string identifier for icon selection
+  mcqQuestions: Question[];
+  tfQuestions: Question[];
+  essayQuestions: Question[];
+}
