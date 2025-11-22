@@ -19,6 +19,7 @@ export interface TFQuestion extends BaseQuestion {
 
 export interface EssayQuestion extends BaseQuestion {
   type: 'ESSAY';
+  modelAnswer: string;
 }
 
 export type Question = MCQQuestion | TFQuestion | EssayQuestion;
