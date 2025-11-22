@@ -57,7 +57,7 @@ const App: React.FC = () => {
               وقم بتغيير الرابط أدناه إلى مسار الصورة المحلي (مثلاً: ./logo.png)
             */}
             <img 
-              src="logo.jpg" 
+              src="/logo.jpg" 
               alt="شعار الشاهين" 
               className="w-48 h-48 object-contain drop-shadow-2xl filter brightness-110 hover:scale-105 transition-transform duration-300"
             />
